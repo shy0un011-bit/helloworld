@@ -3,6 +3,7 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "homepage": "https://shy0un011-bit.github.io/helloworld/",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

@@ -6,10 +6,29 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// GitHub Pages project page URL: https://shy0un011-bit.github.io/helloworld/
+// If you rename the repo or use a custom domain, update this value.
+const BASE_PATH = "/helloworld/";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+  },
+  vite: {
+    base: BASE_PATH,
+    build: {
+      // Static export for GitHub Pages (no server runtime).
+      outDir: "dist",
+    },
+  },
+  // Override the default Cloudflare nitro preset so the build produces plain static files.
+  server: {
+    preset: "static",
+    prerender: {
+      routes: ["/", "/about", "/experience", "/projects", "/skills", "/contact"],
+      crawlLinks: true,
+    },
   },
 });
