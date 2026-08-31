@@ -1,29 +1,42 @@
-# Welcome to your Lovable project
+# Personal Portfolio
 
-This project was built with [Lovable](https://lovable.dev).
+A minimal, multi-page personal portfolio built with React, Vite, React Router, and Tailwind CSS.
 
-## Build with Lovable
+## Customize your content
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+All portfolio content lives in a single file:
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+```text
+src/data/portfolio.ts
 ```
 
-## Built with
+Replace the placeholder values with your real information: name, title, summary, education, awards, work experience, projects, skills, and contact links.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Customize the design
+
+The site starts with a minimal black-and-white palette. Colors, spacing, and typography are controlled by CSS variables in:
+
+```text
+src/styles.css
+```
+
+Edit the `:root` values to change the look. The dark mode values are under `.dark`.
+
+## Local development
+
+```sh
+git clone https://github.com/shy0un011-bit/helloworld.git
+cd helloworld
+bun install
+bun run dev
+```
+
+## Deploy to GitHub Pages
+
+The included `.github/workflows/deploy.yml` builds and deploys the site automatically on every push to `main`.
+
+1. In your GitHub repository, go to **Settings → Pages**.
+2. Under **Build and deployment**, select **GitHub Actions** as the source.
+3. Push to `main`. The workflow will deploy to `https://shy0un011-bit.github.io/helloworld/`.
+
+If you rename the repository or use a custom domain, update `VITE_BASE_PATH` in `.github/workflows/deploy.yml` (and `homepage` in `package.json`) to match the new path.
