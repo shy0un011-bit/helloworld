@@ -17,6 +17,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
   // Static export for GitHub Pages: produce plain HTML files instead of a worker runtime.
+  // NOTE: This preset is only honored outside the Lovable sandbox build environment.
   nitro: {
     preset: "static",
     output: {
@@ -25,7 +26,14 @@ export default defineConfig({
       serverDir: "dist/server",
     },
     prerender: {
-      routes: ["/", "/about", "/experience", "/projects", "/skills", "/contact"],
+      routes: [
+        `${BASE_PATH}`,
+        `${BASE_PATH}about`,
+        `${BASE_PATH}experience`,
+        `${BASE_PATH}projects`,
+        `${BASE_PATH}skills`,
+        `${BASE_PATH}contact`,
+      ],
       crawlLinks: true,
     },
   },
