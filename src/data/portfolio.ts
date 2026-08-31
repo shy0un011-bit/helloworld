@@ -84,40 +84,35 @@ export const experiences = [
 export const projects = [
   {
     title: "Project One",
-    description:
-      "Short description of the project, what problem it solves, and what you built.",
+    description: "Short description of the project, what problem it solves, and what you built.",
     tags: ["React", "TypeScript", "Tailwind"],
     liveUrl: "https://example.com",
     repoUrl: "https://github.com/shy0un011-bit/project-one",
   },
   {
     title: "Project Two",
-    description:
-      "Short description of the project, what problem it solves, and what you built.",
+    description: "Short description of the project, what problem it solves, and what you built.",
     tags: ["Node.js", "Express", "PostgreSQL"],
     liveUrl: "",
     repoUrl: "https://github.com/shy0un011-bit/project-two",
   },
   {
     title: "Project Three",
-    description:
-      "Short description of the project, what problem it solves, and what you built.",
+    description: "Short description of the project, what problem it solves, and what you built.",
     tags: ["Python", "Machine Learning"],
     liveUrl: "",
     repoUrl: "https://github.com/shy0un011-bit/project-three",
   },
   {
     title: "Project Four",
-    description:
-      "Short description of the project, what problem it solves, and what you built.",
+    description: "Short description of the project, what problem it solves, and what you built.",
     tags: ["Next.js", "Prisma", "Vercel"],
     liveUrl: "https://example.com",
     repoUrl: "https://github.com/shy0un011-bit/project-four",
   },
   {
     title: "Project Five",
-    description:
-      "Short description of the project, what problem it solves, and what you built.",
+    description: "Short description of the project, what problem it solves, and what you built.",
     tags: ["Flutter", "Firebase"],
     liveUrl: "",
     repoUrl: "https://github.com/shy0un011-bit/project-five",

@@ -17,9 +17,7 @@ export function HomePage() {
         <h1 className="mt-4 text-5xl font-semibold tracking-tight text-foreground md:text-7xl">
           {personalInfo.name}
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          {personalInfo.summary}
-        </p>
+        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{personalInfo.summary}</p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Link
             to="/projects"

@@ -9,9 +9,7 @@ export function ContactPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-      <h1 className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
-        Contact
-      </h1>
+      <h1 className="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">Contact</h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
         I'm open to opportunities, collaborations, and interesting conversations. Reach out through
         any of the channels below.
