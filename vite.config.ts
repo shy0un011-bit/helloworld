@@ -16,19 +16,20 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  vite: {
-    base: BASE_PATH,
-    build: {
-      // Static export for GitHub Pages (no server runtime).
-      outDir: "dist",
-    },
-  },
-  // Override the default Cloudflare nitro preset so the build produces plain static files.
-  server: {
+  // Static export for GitHub Pages: produce plain HTML files instead of a worker runtime.
+  nitro: {
     preset: "static",
+    output: {
+      dir: "dist",
+      publicDir: "dist/client",
+      serverDir: "dist/server",
+    },
     prerender: {
       routes: ["/", "/about", "/experience", "/projects", "/skills", "/contact"],
       crawlLinks: true,
     },
+  },
+  vite: {
+    base: BASE_PATH,
   },
 });
