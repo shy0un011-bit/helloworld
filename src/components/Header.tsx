@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -13,7 +13,7 @@ const navItems = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const { pathname } = useLocation();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
@@ -27,7 +27,6 @@ export function Header() {
             <Link
               key={item.to}
               to={item.to}
-              activeProps={{ className: "text-foreground" }}
               className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
                 pathname === item.to
                   ? "text-foreground"
